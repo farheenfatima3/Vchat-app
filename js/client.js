@@ -32,7 +32,7 @@ socket.on('receive', data => {
     append(`${data.userName}: ${data.message}`, 'left')
 })
 
-socket.on('left', name => {
+socket.on('left', userName => {
     append(`${userName} left the chat`, 'left')
     delete users[socket.id]
 })
